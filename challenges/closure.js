@@ -18,7 +18,21 @@ myFunction();
 
 // Explanation: 
 
+// The internal variable is accessible because a function can reach one level deeper into itself, and that combined with the inner layer pushing information back up to its parent allows the console.log to work. myFunction is invoking nestedFunction, which is just console.log-ing the internal variable. 
 
 /* Task 2: Counter */
 
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+
+
+/* working attempt */
+
+function summation(num){
+  sum = 0;
+  for(let i = 0; i <= num; i++){
+    sum += i;
+  };
+  return sum;
+};
+
+console.log("Counter: ", summation(4));
